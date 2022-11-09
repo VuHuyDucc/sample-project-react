@@ -1,14 +1,25 @@
 import React from "react";
-import IconBar from "../icon/IconBar";
+import { NavLink } from "react-router-dom";
+
+const Menu = () => {
+  return (
+    <div className="flex items-center gap-6">
+      <NavLink to="/products">Quản lý sản phẩm</NavLink>
+      <NavLink to="/categories">Quản lý danh mục</NavLink>
+      <NavLink to="/users">Quản lý người dùng</NavLink>
+    </div>
+  );
+};
 
 const Header = () => {
   return (
     <header className="sticky top-0 left-0 z-50 w-full py-3 bg-white border-b border-gray-200">
       <div className="container">
         <div className="flex items-center justify-between">
-          <a href="admin.html" className="text-2xl font-bold text-slate-900">
+          <NavLink to="/" className="text-2xl font-bold text-slate-900">
             GoldBees
-          </a>
+          </NavLink>
+          <Menu />
           <div className="flex items-center">
             <div className="relative p-2 ml-10 bg-gray-300 rounded-full cursor-pointer overf low-hidden group">
               <svg
@@ -28,13 +39,6 @@ const Header = () => {
 
               <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-400 border-2 border-white rounded-full translate-x-1/4"></div>
             </div>
-
-            <button
-              id="btn-sidebar"
-              className="ml-6 cursor-pointer text-slate-700"
-            >
-              <IconBar></IconBar>
-            </button>
           </div>
         </div>
       </div>

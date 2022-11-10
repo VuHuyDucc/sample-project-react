@@ -25,4 +25,7 @@
   .custom-pagination {
     @apply w-3 h-3 duration-300 bg-white border border-transparent rounded-full;
   }
+  input[type="file"] {
+    @apply block w-full file:px-4 file:py-2 appearance-none file:outline-none file:bg-gray-200 file:text-zinc-900 file:font-medium file:border-none text-zinc-900 bg-white cursor-pointer dark:text-gray-400 focus:outline-none p-0;
+  }
 }

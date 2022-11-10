@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/layout/Header";
 import Layout from "./components/layout/Layout";
+import Categories from "./pages/categoriesPage/Categories";
 import Home from "./pages/homePage/Home";
 
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/categories" element={<Categories />}></Route>
       </Route>
     </Routes>
   );

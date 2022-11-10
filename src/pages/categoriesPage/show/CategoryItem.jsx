@@ -6,11 +6,7 @@ const CategoryItem = ({ id, thumbnail, name, total }) => {
   return (
     <div className="flex">
       <div className="overflow-hidden basis-[40%] flex-shrink-0 aspect-square">
-        <img
-          src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t1.6435-9/193751762_10101850943282286_7870343905562059893_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=QAjLK0ES7h0AX_0Y6Bq&_nc_ht=scontent.fsgn5-12.fna&oh=00_AfCcOtWhefuySEHpavBZO__4Uxs9yHI2ZqTVjmrxpWwHoA&oe=6393457A"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <img src={thumbnail} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="flex-1 bg-white shadow">
         <div className="px-3 overflow-hidden py-2 flex flex-col h-full">

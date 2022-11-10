@@ -5,8 +5,8 @@ import HeroShowcase from "./HeroShowcase";
 const Hero = ({ data }) => {
   return (
     <div className="grid grid-cols-2 gap-3">
-      {/* <HeroShowcase img={data.img}></HeroShowcase> */}
-      {/* <HeroForm></HeroForm> */}
+      <HeroShowcase img={data.img}></HeroShowcase>
+      <HeroForm data={data}></HeroForm>
     </div>
   );
 };

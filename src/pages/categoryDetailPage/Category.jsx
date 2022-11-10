@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../configs/firebase-config";
 import useFetchSingleData from "../../hooks/useFetchSingleData";
@@ -6,17 +6,11 @@ import Hero from "./hero/Hero";
 
 const Category = () => {
   const id = useParams("id");
-  const [getData] = useFetchSingleData(db, "categories", id.id);
-
-  useEffect(() => {
-    console.log(getData());
-  }, []);
+  const [data] = useFetchSingleData(db, "categories", id.id);
 
   return (
-    <div>
-      <div className="container">
-        <Hero data={data}></Hero>
-      </div>
+    <div className="py-3">
+      <div className="container">{data && <Hero data={data} />}</div>
     </div>
   );
 };

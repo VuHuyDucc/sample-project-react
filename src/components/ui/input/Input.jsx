@@ -1,11 +1,17 @@
 import React from "react";
 import { useController } from "react-hook-form";
 
-const Input = ({ type = "text", name, control, ...props }) => {
+const Input = ({
+  type = "text",
+  name,
+  control,
+  defaultValue = "",
+  ...props
+}) => {
   const { field } = useController({
     name,
     control,
-    defaultValue: "",
+    defaultValue,
   });
   return (
     <input

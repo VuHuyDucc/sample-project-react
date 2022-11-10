@@ -3,19 +3,11 @@ import { doc, onSnapshot } from "firebase/firestore";
 
 export default function useFetchSingleData(db, path, id) {
   const docRef = doc(db, path, id);
+  const [data, setData] = useState();
 
-  const handleFetchSingleData = () => {
-    const data = onSnapshot(docRef, (response) => {
-      let temp = {
-        id: response.id,
-        ...response.data(),
-      };
+  onSnapshot(docRef, (response) => {
+    setData(response.data());
+  });
 
-      return temp;
-    });
-
-    return data;
-  };
-
-  return [handleFetchSingleData];
+  return [data];
 }

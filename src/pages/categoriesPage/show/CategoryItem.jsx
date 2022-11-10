@@ -2,7 +2,7 @@ import React from "react";
 import IconPen from "../../../components/icon/IconPen";
 import IconTrash from "../../../components/icon/IconTrash";
 
-const CategoryItem = () => {
+const CategoryItem = ({ id, thumbnail, name, total }) => {
   return (
     <div className="flex">
       <div className="overflow-hidden basis-[40%] flex-shrink-0 aspect-square">

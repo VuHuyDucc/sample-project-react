@@ -1,7 +1,11 @@
 import React from "react";
+import { db } from "../../../configs/firebase-config";
+import useFetchListData from "../../../hooks/useFetchListData";
 import HeroShowInfor from "./HeroShowInfor";
 
 const Hero = () => {
+  const [categories] = useFetchListData(db, "categories");
+  const [products] = useFetchListData(db, "products");
   return (
     <section>
       <div className="container">
@@ -29,13 +33,13 @@ const Hero = () => {
             <HeroShowInfor
               color="#6366f1"
               title="Quản lý danh mục"
-              total="5"
+              total={categories.length}
               to="/categories"
             />
             <HeroShowInfor
               color="#d946ef"
               title="Quản lý sản phẩm"
-              total="15"
+              total={products.length}
               to="/products"
             />
             <HeroShowInfor

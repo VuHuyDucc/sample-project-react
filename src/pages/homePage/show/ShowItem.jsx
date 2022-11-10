@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const ShowItem = ({ data }) => {
-  useEffect(() => {
-    console.log(data);
-  }, []);
   return (
     <NavLink to={`/category/${data.id}`} className="w-full relative">
       <div className="overflow-hidden aspect-square w-full mb-4">

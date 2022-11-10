@@ -11,7 +11,7 @@ const CategoryItem = ({ id, thumbnail, name, total }) => {
       <div className="flex-1 bg-white shadow">
         <div className="px-3 overflow-hidden py-2 flex flex-col h-full">
           <p className="overflow-hidden text-ellipsis capitalize text-xl mb-2 whitespace-nowrap">
-            name
+            {name}
           </p>
           <p className="text-zinc-700 font-medium">Tổng sản phẩm: 30</p>
           <div className="mt-auto flex items-center gap-3 text-white font-bold">
